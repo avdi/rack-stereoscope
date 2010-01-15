@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "rack-stereoscope"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Bringing a new dimension to your RESTful API}
+    gem.description = %Q{Rack::Stereoscope puts an HTML face on RESTful APIs.}
     gem.email = "avdi@avdi.org"
     gem.homepage = "http://github.com/avdi/rack-stereoscope"
     gem.authors = ["Avdi Grimm"]
