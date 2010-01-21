@@ -81,6 +81,10 @@ module Rack
         body do
           
           h1 "#{response.status} #{request.url}"
+          h2 "Headers"
+          div do
+            this.data_to_html(response.headers, mab)
+          end
           if !content.to_s.empty?
             h2 "Response:"
             case response.content_type
@@ -179,7 +183,10 @@ module Rack
             div(:class => 'url-template-variable') do
               label do
                 text "#{variable}: "
-                input(:type => 'text', :name => variable)
+                input(
+                  :type => 'text', 
+                  :name => variable, 
+                  :value => template.variable_defaults[variable])
               end
             end
           end
