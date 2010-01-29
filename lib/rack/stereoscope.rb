@@ -102,13 +102,7 @@ module Rack
           end
           h2 "Raw:"
           tt do
-            raw_content = case response.content_type
-                          when 'application/json'
-                            JSON.pretty_generate(JSON.parse(content.join))
-                          else
-                            content.join
-                          end
-            pre raw_content
+            pre(content.join, :style => 'overflow:auto;')
           end
         end
       end
